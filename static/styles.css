@@ -498,6 +498,56 @@ label,
   text-decoration: none;
 }
 
+.divider {
+  margin: 96px 0 32px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.6em;
+  text-align: center;
+  text-indent: 0.6em;
+  opacity: 0.4;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.footer-gif {
+  width: clamp(72px, 14vw, 100px);
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.85;
+}
+
+.footer-copy {
+  margin: 0;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.footer-copy a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 90, 182, 0.5);
+  text-underline-offset: 3px;
+}
+
+.footer-copy a:hover {
+  text-decoration-color: var(--pink);
+}
+
 @media (max-width: 640px) {
   main {
     width: min(100% - 32px, 980px);
