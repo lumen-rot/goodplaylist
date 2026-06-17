@@ -493,11 +493,11 @@ label,
 @media (max-width: 640px) {
   main {
     width: min(100% - 32px, 980px);
-    margin-top: 40px;
+    margin-top: 64px;
   }
 
   .intro {
-    margin-bottom: 56px;
+    margin-bottom: 88px;
   }
 
   .logo-lockup {
@@ -506,6 +506,10 @@ label,
 
   .composer {
     grid-template-columns: 1fr;
+  }
+
+  .source-line {
+    margin: 10px 0 8px;
   }
 
   .action-panel {
