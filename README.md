@@ -4,28 +4,29 @@ Tiny no-login playlist generator.
 
 It takes a song, finds the closest YouTube Music match, pulls related tracks, and prints a temporary YouTube playlist link.
 
-## Use
+Live at https://goodplaylist.lumenrot.com/
+
+## Web (Cloudflare Worker)
+
+The web app runs on Cloudflare Workers — `worker.ts` handles `/api/*`, and `static/` is served as Worker Assets.
 
 ```sh
-cd /Users/j/workspace/playground-2/tunequeue
-uv run tunequeue.py "pinkpantheress pain" --limit 25
+cd /Users/j/workspace/tunequeue
+npm install
+npx wrangler dev      # local at http://127.0.0.1:8787
+npx wrangler deploy   # ship to Cloudflare
 ```
 
-Open the printed YouTube link. It is a temporary playlist, not a saved playlist.
+Config lives in `wrangler.toml`. No build step — wrangler bundles `worker.ts` directly.
 
-To open it automatically:
+## CLI (Python, legacy)
+
+The original Python CLI is preserved as `tunequeue-old.py` and the Flask web wrapper as `app-old.py`.
 
 ```sh
-uv run tunequeue.py "pinkpantheress pain" --limit 25 --open
+uv run tunequeue-old.py "pinkpantheress pain" --limit 25
+uv run tunequeue-old.py "pinkpantheress pain" --limit 25 --open
 ```
-
-## Web
-
-```sh
-uv run python app.py
-```
-
-Open http://127.0.0.1:8765
 
 ## Next ideas
 

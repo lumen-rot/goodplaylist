@@ -94,6 +94,14 @@ label,
   position: relative;
 }
 
+.search-anchor {
+  position: relative;
+}
+
+.search-anchor:has(#results:not([hidden])) ~ .source-line {
+  display: none;
+}
+
 .composer {
   display: grid;
   grid-template-columns: minmax(0, 760px) auto;
