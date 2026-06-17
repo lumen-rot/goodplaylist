@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://goodplaylist.lumenrot.com/sitemap.xml
