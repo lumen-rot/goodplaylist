@@ -1,0 +1,9 @@
+name = "tunequeue"
+main = "worker.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./static"
+binding = "ASSETS"
+not_found_handling = "single-page-application"

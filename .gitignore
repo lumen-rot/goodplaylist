@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+output/
+.playwright-cli/
+.DS_Store

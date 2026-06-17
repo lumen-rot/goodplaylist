@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 42 42">
+  <defs>
+    <mask id="logo-notches">
+      <rect width="32" height="32" rx="7" fill="white"/>
+      <path d="M8 0h8l-4 7L8 0ZM18 32h8l-4-7L18 32Z" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#f75ab6" mask="url(#logo-notches)"/>
+</svg>

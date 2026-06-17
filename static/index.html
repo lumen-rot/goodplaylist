@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>goodplaylist</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="intro">
+        <div class="logo-lockup">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <defs>
+                <mask id="logo-notches">
+                  <rect width="32" height="32" rx="7" fill="white" />
+                  <path d="M8 0h8l-4 7L8 0ZM18 32h8l-4-7L18 32Z" fill="black" />
+                </mask>
+              </defs>
+              <rect width="32" height="32" rx="7" fill="currentColor" mask="url(#logo-notches)" />
+            </svg>
+          </span>
+          <h1><span class="good-word">good</span>playlist</h1>
+        </div>
+        <p>create a good youtube playlist from a single song</p>
+      </section>
+
+      <section id="composer" class="composer">
+        <div class="search-box">
+          <!-- <label for="search">Song</label> -->
+          <div id="search-field" class="search-field">
+            <div id="selected-chip" class="selected-chip" hidden></div>
+            <input id="search" name="search" autocomplete="off" placeholder="Search a song">
+          </div>
+          <div id="results" class="results" hidden></div>
+          <p class="source-line">
+            powered by <a href="https://tunebat.com/" target="_blank" rel="noreferrer">tunebat</a>
+            <span class="info-tip" tabindex="0" aria-label="What is Tunebat?" data-tip="Tunebat is a music database for key, BPM, energy, danceability. It also has an extremely well done recommendation engine">?</span>
+          </p>
+        </div>
+
+        <div class="action-panel">
+          <button id="create" class="primary-action" hidden>
+            <span class="button-text">Make playlist</span>
+            <span class="button-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </button>
+          <button id="limit-picker" class="limit-cycler" type="button" aria-label="Playlist size">
+            <span id="limit-number" class="limit-number">15</span>
+            <span class="limit-label">songs</span>
+          </button>
+        </div>
+      </section>
+
+      <p id="status" class="status"></p>
+      <section id="playlist" class="playlist"></section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
