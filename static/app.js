@@ -13,7 +13,7 @@ let selectedSong = null;
 let searchTimer = null;
 let searchRequest = null;
 let playlistUrl = null;
-let selectedLimit = 15;
+let selectedLimit = 25;
 const limitOptions = [5, 15, 25];
 
 function setStatus(text) {
