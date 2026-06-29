@@ -1,5 +1,6 @@
 const searchInput = document.querySelector("#search");
 const composer = document.querySelector("#composer");
+const searchBox = document.querySelector(".search-box");
 const searchField = document.querySelector("#search-field");
 const resultsEl = document.querySelector("#results");
 const selectedChip = document.querySelector("#selected-chip");
@@ -65,6 +66,7 @@ function renderResults(results) {
 
   if (!results.length) {
     resultsEl.hidden = true;
+    searchBox.classList.remove("is-searching");
     return;
   }
 
@@ -84,6 +86,7 @@ function renderResults(results) {
       searchInput.placeholder = "";
       renderSelected(song);
       resultsEl.hidden = true;
+      searchBox.classList.remove("is-searching");
       clearPlaylist();
       setStatus("");
     });
@@ -91,12 +94,14 @@ function renderResults(results) {
   }
 
   resultsEl.hidden = false;
+  searchBox.classList.add("is-searching");
 }
 
 function clearSelected() {
   renderSelected(null);
   searchInput.placeholder = "Search a song";
   searchInput.focus();
+  searchBox.classList.remove("is-searching");
   clearPlaylist();
   setStatus("");
 }
@@ -121,6 +126,7 @@ searchInput.addEventListener("input", () => {
   if (query.length < 2) {
     renderResults([]);
     setStatus("");
+    searchBox.classList.remove("is-searching");
     return;
   }
 
@@ -199,5 +205,6 @@ createBtn.addEventListener("click", async () => {
 document.addEventListener("click", (event) => {
   if (!resultsEl.contains(event.target) && event.target !== searchInput) {
     resultsEl.hidden = true;
+    searchBox.classList.remove("is-searching");
   }
 });

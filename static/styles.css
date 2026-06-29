@@ -102,6 +102,10 @@ label,
   display: none;
 }
 
+.search-box.is-searching .source-line {
+  display: none;
+}
+
 .composer {
   display: grid;
   grid-template-columns: minmax(0, 760px) auto;
@@ -157,7 +161,7 @@ label,
 .results {
   position: absolute;
   z-index: 10;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   left: 0;
   right: 0;
   max-height: min(420px, 55vh);
